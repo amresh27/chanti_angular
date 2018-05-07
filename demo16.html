@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="angular.js"></script>
+</head>
+
+<body>
+<div ng-app="m1" ng-controller="c1">
+No Of Items:<input type="number" ng-model="ni"><br>
+Cost of Item:<input type="number" ng-model="ci"><br>
+
+Total cost Of Items={{total()}}
+</div>
+<script>
+var x=angular.module("m1",[]);
+x.controller("c1",function($scope){
+
+$scope.ni=0;
+$scope.ci=0;
+
+$scope.total=function()
+{
+return $scope.ni*$scope.ci;
+};
+
+});
+
+</script>
+
+
+</body>
+</html>
